@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slots",
+  "info": {
+    "name": "Slot",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "begin": {
+      "type": "datetime",
+      "required": true
+    },
+    "end": {
+      "type": "datetime",
+      "required": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "course": {
+      "model": "course",
+      "via": "slot"
+    }
+  }
+}

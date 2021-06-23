@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fields",
+  "info": {
+    "name": "Field"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "hours": {
+      "type": "decimal",
+      "required": true
+    },
+    "courses": {
+      "via": "field",
+      "collection": "course"
+    }
+  }
+}

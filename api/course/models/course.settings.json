@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nbStudents": {
+      "type": "integer",
+      "required": true
+    },
+    "duration": {
+      "type": "decimal",
+      "required": true
+    },
+    "field": {
+      "model": "field",
+      "via": "courses"
+    },
+    "room": {
+      "model": "room",
+      "via": "courses"
+    },
+    "slot": {
+      "via": "course",
+      "model": "slot"
+    }
+  }
+}

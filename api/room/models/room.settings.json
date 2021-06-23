@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "name": "Room",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "capacity": {
+      "type": "integer"
+    },
+    "courses": {
+      "via": "room",
+      "collection": "course"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
